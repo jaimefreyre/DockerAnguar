@@ -1,0 +1,27 @@
+<div><button (click)="IrANuevoCliente()" > Nuevo Cliente </button></div>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Nombre</th>
+      <th scope="col">Primer Apellido</th>
+      <th scope="col">Segundo Apellido</th>
+      <th scope="col">Edad</th>
+      <th scope="col">Email</th>
+      <th scope="col">telefono</th>
+      <th scope="col">actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes"> 
+      <td> {{cliente.nombre}} </td>
+      <td> {{cliente.apellido_1}} </td>
+      <td> {{cliente.apellido_2}} </td>
+      <td> {{cliente.edad}} </td>
+      <td> {{cliente.email}} </td>
+      <td> {{cliente.phone_number}} </td>
+      <td> <span (click)="GoToEditClient(cliente.id)" >Edit</span> <span (click)="GoToDeleteClient(cliente.id)" >delete</span> </td>
+    </tr>
+    
+  </tbody>
+</table>

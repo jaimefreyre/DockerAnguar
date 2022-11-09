@@ -1,0 +1,30 @@
+<div class="cliente_nuevo_main_container" >
+    <div  >  
+        Crear Cliente
+    </div>
+    <div  class=" form_container " >
+        <form action="" (ngSubmit)="CreateUser(form)" #form="ngForm" >
+            <div class="mb-3" >
+                <label class="form-label" name="nombre" id="nombre" for="nombre">Nombre</label>
+                <input class="form-control" ngModel name="nombre" type="text"></div>
+            <div class="mb-3" >
+                <label class="form-label" name="apellido_1" id="apellido_1" for="apellido_1">Primer Apellido</label>
+                <input class="form-control" ngModel name="apellido_1" type="text"></div>
+            <div class="mb-3" >
+                <label class="form-label" name="apellido_2" id="apellido_2" for="apellido_2">Segundo Apellido</label>
+                <input class="form-control" ngModel name="apellido_2" type="text"></div>
+            <div class="mb-3" >
+                <label class="form-label" name="email" id="email" for="email">Email</label>
+                <input class="form-control" ngModel name="email" type="email"></div>
+            <div class="mb-3" >
+                <label class="form-label" name="edad" id="edad" for="edad">Edad</label>
+                <input class="form-control" ngModel name="edad" type="text"></div>
+            <div class="mb-3" >
+                <label class="form-label" name="phone_number" id="phone_number" for="phone_number">Número de teléfono</label>
+                <input class="form-control" ngModel name="phone_number" type="text"></div>
+            <div>
+                <button class="btn btn-primary" type="submit">Add Client</button>
+            </div>
+        </form>
+    </div>
+</div>

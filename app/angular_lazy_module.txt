@@ -1,0 +1,38 @@
+creamos un modulo para los clientes
+
+$ ng g m clientes/clientes
+
+y hermano a este creamos un directorio llamado pages
+donde estarán todos los componentes de clientes
+
+creamos su modulo de clientesRouting dentro del directorio clientes
+
+$ ng g m clientes/clientesRouting --flat
+
+y creamos un array const routes:Routes = [
+    {
+        path:'',
+        Children:[
+            {
+                path:'clientes' , component
+            },
+            {
+                path:'cliente/nuevo' , component ....
+            }
+        ]
+    }
+]
+
+y en los imports de este routingModule importamos RouterModule.forChild(routes) el parametro hace mención a la
+constante de arriba
+
+y vamos al clientes.module.ts y añadimos en el array imports el routingModule de clientesRoutingModule
+
+por ultimos vamos al appRoutingModule.ts
+creamos un path para el clientesModule , cargando los hijos , los por el directorio
+ {
+    path:'clientes' ,
+    loadChildren: ()=>import('./clientes/clientes.module').then( m => m.ClientesModule )
+  }
+
+lo carga asíncronamente por lo tanto usamos el then para traer el ClientesModule
